@@ -18,7 +18,7 @@ function helloName(name) {
   return 'Hello ' + name + '!';
 }
 // Remember to call the function to test
-console.log('Text should say "Hello, Sam!"', helloName("Sam"));
+console.log('Text should say "Hello, Sam!":', helloName("Sam"));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
@@ -63,19 +63,19 @@ console.log('isPositive - should say false', isPositive(-3));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
-let array = ["cat", "dog", "mouse"];
+let arr1 = ["cat", "dog", "mouse"];
 //let now = [];
 
-function getLast([a]) {
-  if ([a]) {
-    let the_last_item = [a.pop()];
+function getLast([array]) {
+  if ([array]) {
+    let the_last_item = [array.pop()];
     return the_last_item;
   } else {
     return 'undefined';
   }
 
 }
-console.log(getLast([array]));
+console.log(getLast([arr1]));
 //console.log(getLast([now]));
 
 // 7. Function to find a value in an array. Return true if the 
@@ -89,8 +89,8 @@ function find(value, array) {
     if (array[i] === value) {
       console.log(true);
       break;
-    }else{
-    console.log(false);
+    } else {
+      console.log(false);
     }
   }
 }
@@ -103,23 +103,44 @@ console.log(find(7, goo));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+let string = ['apple', 'donut', 'gummy bears'];
 
+function isFirstLetter(letter, string) {
+  if (string.charAt(0) === letter) {
+    console.log(true, letter, string);
+  } else {
+    console.log(false, letter, string);
+  }
 }
+
+
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
+let arr4 = [1, 3, 5];
+
+function sumAll(array) {
   let sum = 0
   // TODO: loop to add items
+  for (let i = 0; i < array.length; i += 1) {
+    sum += array[i]
+  }
+  console.log(sum);
   return sum;
 }
+console.log('This is the sum:', sumAll(arr4));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let inputArray = [-2, 4, 7, -4, 6];
 
+function allPos(array){
+  let posArr = array.filter(num => num > -1);
+  return posArr;
+}
+console.log(allPos(inputArray));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
