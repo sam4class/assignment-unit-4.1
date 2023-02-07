@@ -88,9 +88,11 @@ function find(value, array) {
     console.log(array[i]);
     if (array[i] === value) {
       console.log(true);
+      return true;
       break;
     } else {
       console.log(false);
+      return false;
     }
   }
 }
@@ -103,13 +105,15 @@ console.log(find(7, goo));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-let string = ['apple', 'donut', 'gummy bears'];
+let string = 'apple';
 
 function isFirstLetter(letter, string) {
   if (string.charAt(0) === letter) {
     console.log(true, letter, string);
+    return true;
   } else {
     console.log(false, letter, string);
+    return false;
   }
 }
 
@@ -146,3 +150,36 @@ console.log(allPos(inputArray));
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+//CodeWars
+
+// The Western Suburbs Croquet Club has two categories of 
+//membership, Senior and Open. 
+//To be a senior, a member must be at least 55 years old and have 
+//a handicap greater than 7. In this croquet club, handicaps range 
+//from -2 to +26; the better the player the lower the handicap.
+
+//Input
+//Input will consist of a list of pairs. Each pair contains information
+//for a single potential member. Information consists of an integer 
+//for the person's age and an integer for the person's handicap.
+
+//Output
+//Output will consist of a list of string values stating whether the respective member is to be placed 
+//in the senior or open category.
+
+  let combArr = [[35, 19], [18,3], [71, 12]];
+
+  function openOrSenior(data){
+    for(let i=0; i<data.length; i++){
+        console.log(data[i][0]);
+        console.log(data[i][1]);
+        if (data[i][0] >= 55 && 7<data[i][1]<26){
+          console.log('Senior');
+        }else{
+          console.log('Open');
+             }
+      }
+    }
+
+console.log(openOrSenior(combArr));
