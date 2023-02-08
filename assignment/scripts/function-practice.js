@@ -92,13 +92,13 @@ function find(value, array) {
       break;
     } else {
       console.log(false);
-      return false;
     }
   }
+  return false;
 }
 
-console.log(find(7, goo));
-
+console.log(find(2, goo));
+//console.log(find(7, goo));
 
 // ----------------------
 // Stretch Goals
@@ -175,11 +175,12 @@ console.log(allPos(inputArray));
         console.log(data[i][0]);
         console.log(data[i][1]);
         if (data[i][0] >= 55 && 7<data[i][1]<26){
-          console.log('Senior');
+          return 'Senior';
         }else{
           console.log('Open');
              }
       }
+      return 'Open';
     }
 
 console.log(openOrSenior(combArr));
