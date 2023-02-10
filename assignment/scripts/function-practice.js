@@ -71,7 +71,7 @@ function getLast([array]) {
     let the_last_item = [array.pop()];
     return the_last_item;
   } else {
-    return 'undefined';
+    return;
   }
 
 }
@@ -138,10 +138,10 @@ console.log('This is the sum:', sumAll(arr4));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-let inputArray = [-2, 4, 7, -4, 6];
+let inputArray = [-2, 4, 7, -4, 6, 0];
 
 function allPos(array){
-  let posArr = array.filter(num => num > -1);
+  let posArr = array.filter(num => num > 0);
   return posArr;
 }
 console.log(allPos(inputArray));
