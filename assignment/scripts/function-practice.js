@@ -66,17 +66,35 @@ console.log('isPositive - should say false', isPositive(-3));
 let arr1 = ["cat", "dog", "mouse"];
 //let now = [];
 
-function getLast([array]) {
-  if ([array]) {
-    let the_last_item = [array.pop()];
+//function getLast([array]) {
+  //if ([array]) {
+    //let the_last_item = [array.pop()];
+    //return the_last_item;
+  //} else {
+   // return;
+  //}
+
+//}
+//console.log(getLast([arr1]));
+//console.log(getLast([now]));
+
+
+
+//******Resubmit*********
+function getLast([array]){
+  if ([array]){
+    let the_last_item = array[array.length -1]
     return the_last_item;
-  } else {
+  }else{
     return;
   }
-
 }
 console.log(getLast([arr1]));
-//console.log(getLast([now]));
+
+
+
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
